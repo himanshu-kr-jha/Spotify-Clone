@@ -1,0 +1,354 @@
+body{
+    background-color: #000;
+    font-family: 'Montserrat',sans-serif;
+    margin: 0;
+    color: #fff;
+    overflow: hidden;
+}
+.main{
+    display: flex;
+    height: 100vh;
+}
+.sidebar{
+    background-color:#000;
+    width: 310px;
+    margin-bottom: 57px;
+    margin-right: 0.5rem;
+    border-radius: 1rem; /*16px*/
+    /* padding: 0.25rem; */
+    /* margin: 5px; */
+}
+.main-content{
+    background-color:#121212;
+    flex:1;
+    overflow: scroll;
+    margin-bottom: 57px;
+    border-radius: 1rem;
+    overflow:auto;
+    padding: 0 1.5rem 0 1.5rem;
+}
+.playback-bar{
+    background-color:black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 72px ;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav{
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+    
+}
+.nav-option{
+    line-height: 2.5rem;
+    opacity: 0.7;
+    padding: 0.5rem 0.75rem;
+}
+.nav-option i{
+    font-size: 1.25rem;
+}
+.nav-option a{
+    font-size: 1rem;
+}
+.nav-option:hover{
+    opacity: 1;
+}
+
+.library{
+    background-color: #121212;
+    height: 100%;
+    border-radius: 1rem;
+}
+.option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    
+}
+.icons{
+    display: flex;
+    font-size: 1rem;
+    font-size: 1.05rem;
+}
+.icons i{
+    margin-right: 1rem;
+    opacity: 0.7;
+}
+.icons i:hover{
+    opacity: 1;
+}
+.lib-option img{
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.box{
+    background-color: #232323;
+    height: 8rem;
+    border-radius: 0.75rem;
+    margin: 0.25rem 0 0.75rem 0;
+    padding: 0.75rem 1rem;
+}
+.box-p1{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.box-p2{
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+.badge{
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+}
+.dark-badge{
+    background-color:black;
+    color: white;
+}
+
+.sticky-nav{
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    z-index: 10;
+}
+.nav-icons{
+    margin-left: 0.75rem;
+    /* padding-right: 1rem;
+    padding-left: 0.5rem; */
+}
+.sticky-nav-option{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding-right: 1rem;
+    padding-left: 1rem; */
+}
+.nav-sticky{
+    margin-right: 1rem;
+}
+.install-icon i{
+    margin-right:7px;
+}
+
+@media (max-width:1000px){
+    .hide{
+        display: none;
+    }
+}
+
+.card{
+    background-color: #232323;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-img{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.card-title{
+    font-weight: 600;
+}
+.card-info{
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+.footer{
+    /* width: ; */
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line{
+    width: 90%;
+    height: 30%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+.playback-bar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.album{
+    width: 25%;
+}
+.player{
+    width: 50%;
+}
+.controls{
+    width: 25%;
+}
+
+.player-control-icon{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.7;
+}
+.player-control-icon:hover{
+    opacity: 1;
+}
+.player-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-bar{
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+}
+.progress-bars{
+    width: 80%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    /* margin-left: 3rem; */
+}
+
+.progress-bars::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+.progress-bars::-webkit-slider-thumb{
+    appearance: none;
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    background-color:#ddd;
+    margin-top: -4px;
+}
+.progress-bars::-webkit-slider-runnable-track:hover{
+    background-color: #1bd760;
+}
+span{
+    font-size: 13px;
+}
+/* .controls{
+    display: flex;
+    justify-content: space-around;
+} */
+.c-icon{
+    display: flex;
+    justify-content: space-around;
+}
+.controls-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0 0.35rem 0.1rem 0.35rem;
+    opacity: 0.7;
+}
+.controls-icon:hover{
+    opacity: 1;
+}
+.controls-icon-sound{
+    width: 25%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    /* margin-left: 3rem; */
+}
+.controls-icon-sound::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.13rem;
+    /* margin-top: px; */
+}
+.controls-icon-sound::-webkit-slider-thumb{
+    appearance: none;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    background-color:#ddd;
+    margin-top: -3px;
+}
+.small{
+    padding-top: 5px;
+    width: 1rem;
+    height: 1rem;
+    opacity: 0.5;
+}
+.small:hover{
+    opacity: 1;
+}
+.controls-icon-sound::-webkit-slider-runnable-track:hover{
+    background-color: #1bd760;
+    border-radius: 100px;
+    height: 0.13rem;
+    /* margin-top: px; */
+}
+.album{
+    display: flex;
+    justify-content: center;
+}
+.album-img{
+    width: 24%;
+}
+.info{
+    width: 75%;
+}
+.alb-img{
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 10%;
+}
+.like-btn{
+    margin-top: 1rem;
+}
+.content{
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* padding-left: 0rem; */
+    padding-top: 0.8rem;
+    /* justify-content: ;
+    align-items: center; */
+}
+.song{
+    margin: 1px;
+    margin-right: 1rem;
+    appearance: none;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.artist{
+    margin: 1px;
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: #ddd;
+}
+
+
